@@ -138,63 +138,76 @@ PODS:
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
   - Protobuf (3.6.1)
-  - React (0.57.5):
-    - React/Core (= 0.57.5)
-  - react-native-google-maps (0.19.0):
+  - React (0.57.1):
+    - React/Core (= 0.57.1)
+  - react-native-contacts (2.2.4):
+    - React
+  - react-native-google-maps (0.22.1):
+    - Google-Maps-iOS-Utils (= 2.1.0)
     - GoogleMaps (= 2.5.0)
     - React
-  - react-native-maps (0.19.0):
+  - react-native-maps (0.22.1):
     - React
-  - React/Core (0.57.5):
-    - yoga (= 0.57.5.React)
-  - React/CxxBridge (0.57.5):
+  - react-native-splash-screen (3.0.6):
+    - React
+  - React/Core (0.57.1):
+    - yoga (= 0.57.1.React)
+  - React/CxxBridge (0.57.1):
     - Folly (= 2016.10.31.00)
     - React/Core
     - React/cxxreact
-  - React/cxxreact (0.57.5):
+  - React/cxxreact (0.57.1):
     - boost-for-react-native (= 1.63.0)
     - Folly (= 2016.10.31.00)
     - React/jschelpers
     - React/jsinspector
-  - React/DevSupport (0.57.5):
+  - React/DevSupport (0.57.1):
     - React/Core
     - React/RCTWebSocket
-  - React/fishhook (0.57.5)
-  - React/jschelpers (0.57.5):
+  - React/fishhook (0.57.1)
+  - React/jschelpers (0.57.1):
     - Folly (= 2016.10.31.00)
     - React/PrivateDatabase
-  - React/jsinspector (0.57.5)
-  - React/PrivateDatabase (0.57.5)
-  - React/RCTActionSheet (0.57.5):
+  - React/jsinspector (0.57.1)
+  - React/PrivateDatabase (0.57.1)
+  - React/RCTActionSheet (0.57.1):
     - React/Core
-  - React/RCTAnimation (0.57.5):
+  - React/RCTAnimation (0.57.1):
     - React/Core
-  - React/RCTBlob (0.57.5):
+  - React/RCTBlob (0.57.1):
     - React/Core
-  - React/RCTGeolocation (0.57.5):
+  - React/RCTGeolocation (0.57.1):
     - React/Core
-  - React/RCTImage (0.57.5):
+  - React/RCTImage (0.57.1):
     - React/Core
     - React/RCTNetwork
-  - React/RCTLinkingIOS (0.57.5):
+  - React/RCTLinkingIOS (0.57.1):
     - React/Core
-  - React/RCTNetwork (0.57.5):
+  - React/RCTNetwork (0.57.1):
     - React/Core
-  - React/RCTSettings (0.57.5):
+  - React/RCTSettings (0.57.1):
     - React/Core
-  - React/RCTText (0.57.5):
+  - React/RCTText (0.57.1):
     - React/Core
-  - React/RCTVibration (0.57.5):
+  - React/RCTVibration (0.57.1):
     - React/Core
-  - React/RCTWebSocket (0.57.5):
+  - React/RCTWebSocket (0.57.1):
     - React/Core
     - React/fishhook
     - React/RCTBlob
   - RNBackgroundFetch (2.4.4):
     - React
+  - RNDeviceInfo (0.9.3):
+    - React
+  - RNFS (2.12.0):
+    - React
+  - RNShare (1.1.3):
+    - React
   - RNVectorIcons (4.6.0):
     - React
-  - yoga (0.57.5.React)
+  - RNViewShot (2.5.0):
+    - React
+  - yoga (0.57.1.React)
 
 DEPENDENCIES:
   - BVLinearGradient (from `../node_modules/react-native-linear-gradient`)
@@ -206,8 +219,10 @@ DEPENDENCIES:
   - Google-Maps-iOS-Utils
   - GoogleMaps
   - Interactable (from `../node_modules/react-native-interactable`)
+  - react-native-contacts (from `../node_modules/react-native-contacts`)
   - react-native-google-maps (from `../node_modules/react-native-maps`)
   - react-native-maps (from `../node_modules/react-native-maps`)
+  - react-native-splash-screen (from `../node_modules/react-native-splash-screen`)
   - React/Core (from `../node_modules/react-native`)
   - React/CxxBridge (from `../node_modules/react-native`)
   - React/DevSupport (from `../node_modules/react-native`)
@@ -222,11 +237,15 @@ DEPENDENCIES:
   - React/RCTVibration (from `../node_modules/react-native`)
   - React/RCTWebSocket (from `../node_modules/react-native`)
   - RNBackgroundFetch (from `../node_modules/react-native-background-fetch`)
+  - RNDeviceInfo (from `../node_modules/react-native-device-info`)
+  - RNFS (from `../node_modules/react-native-fs`)
+  - RNShare (from `../node_modules/react-native-share`)
   - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
-  - yoga (from `../node_modules/react-native/ReactCommon/yoga`)
+  - RNViewShot (from `../node_modules/react-native-view-shot`)
+  - yoga (from `../node_modules/react-native/ReactCommon/yoga/yoga.podspec`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - boost-for-react-native
     - BoringSSL-GRPC
     - Firebase
@@ -261,16 +280,28 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-interactable"
   React:
     :path: "../node_modules/react-native"
+  react-native-contacts:
+    :path: "../node_modules/react-native-contacts"
   react-native-google-maps:
     :path: "../node_modules/react-native-maps"
   react-native-maps:
     :path: "../node_modules/react-native-maps"
+  react-native-splash-screen:
+    :path: "../node_modules/react-native-splash-screen"
   RNBackgroundFetch:
     :path: "../node_modules/react-native-background-fetch"
+  RNDeviceInfo:
+    :path: "../node_modules/react-native-device-info"
+  RNFS:
+    :path: "../node_modules/react-native-fs"
+  RNShare:
+    :path: "../node_modules/react-native-share"
   RNVectorIcons:
     :path: "../node_modules/react-native-vector-icons"
+  RNViewShot:
+    :path: "../node_modules/react-native-view-shot"
   yoga:
-    :path: "../node_modules/react-native/ReactCommon/yoga"
+    :path: "../node_modules/react-native/ReactCommon/yoga/yoga.podspec"
 
 SPEC CHECKSUMS:
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
@@ -299,12 +330,18 @@ SPEC CHECKSUMS:
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
   React: 1fe0eb13d90b625d94c3b117c274dcfd2e760e11
-  react-native-google-maps: 963fc78a5ac32dad3a726e4fa08b5307faa5cab2
+  react-native-contacts: 1a8913219e54d1fa20e817b99d9b42b9ec98558d
+  react-native-google-maps: b946d62e25dc66097921ed82520e45b0b081768a
   react-native-maps: 066c2afcc89e18726377bcc685315f989ca22449
+  react-native-splash-screen: 8e3f866dc79bfe533baeffd0a38c33f7a7eae7f8
   RNBackgroundFetch: 8c4f77f83c398c659bce82af2f0a885079417b9e
+  RNDeviceInfo: b375b3374cda3203d6d48cea8c07e46ba1169e26
+  RNFS: bbb1a64eb245763daf34aea86f97c97c4e85f74c
+  RNShare: d875e8e37f3e5e8eb7a103ae01e06490af1796f6
   RNVectorIcons: c0dbfbf6068fefa240c37b0f71bd03b45dddac44
+  RNViewShot: fdf9a64f0621ebc4e7c3392a10d2ffb70a7faee4
   yoga: b1ce48b6cf950b98deae82838f5173ea7cf89e85
 
-PODFILE CHECKSUM: 15a3391a53336d42bb815e3bc88f211ece7f6628
+PODFILE CHECKSUM: a6dae97e8a7f4e2cbdd390d266e4334d51e6aa5b
 
 COCOAPODS: 1.5.3
